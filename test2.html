@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+							margin: 0;
+							padding: 0;
+						}
+			 
+						.box {
+							width: 340px;
+							height: 340px;
+							border: 1px #00FFFF solid;
+							position: relative;
+							margin: 100px;
+						}
+			 
+						.box div {
+							width: 100px;
+							height: 100px;
+							background-color: royalblue;
+							text-align: center;
+							line-height: 100px;
+						}
+			 
+						.div2 {
+							position: absolute;
+							top: 10px;
+							left: 10px;
+						}
+			 
+						.div3 {
+							position: absolute;
+							top: 10px;
+							left: 120px;
+						}
+			 
+						.div4 {
+							position: absolute;
+							top: 10px;
+							left: 230px;
+						}
+			 
+						.div5 {
+							position: absolute;
+							top: 120px;
+							left: 230px;
+						}
+			 
+						.div6 {
+							position: absolute;
+							top: 230px;
+							left: 230px;
+						}
+			 
+						.div7 {
+							position: absolute;
+							top: 230px;
+							left: 120px;
+						}
+			 
+						.div8 {
+							position: absolute;
+							top: 230px;
+							left: 10px;
+						}
+			 
+						.div9 {
+							position: absolute;
+							top: 120px;
+							left: 10px;
+						}
+			 
+						.button {
+							width: 100px;
+							height: 100px;
+							background-color: #62c6a3;
+							position: absolute;
+							text-align: center;
+							line-height: 100px;
+							top: 120px;
+							left: 120px;
+						}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+					<div class="div2">短裙</div>
+					<div class="div3">口红</div>
+					<div class="div4">草莓</div>
+					<div class="div5">西瓜</div>
+					<div class="div6">奶茶</div>
+					<div class="div7">美甲</div>
+					<div class="div8">谢谢参与</div>
+					<div class="div9">苹果15</div>
+					<strong class="button"> 点击抽奖</strong>
+				</div>
+	</body>
+	<script>
+		let button = document.getElementsByClassName('button')[0];  //获取button类的元素
+					let box = document.getElementsByClassName('box')[0]; //获取所有box类的集合
+					let pirze = box.getElementsByTagName('div'); //寻找div标签的元素，构成一个集合
+					console.log(pirze);
+					
+					let k = 0; //div的初始值
+					let time = 500;  //间隔时间
+					let count = 0;  //转动圈数
+					button.onclick = eve;
+					
+					function eve() {
+						pirze[k].style.background = "pink"; //定义一个粉色方块
+						int = setInterval(pu, time)  //定时调用函数，pu被调用的函数名，time间隔时间
+						rom = Math.floor(Math.random() * pirze.length); //调用函数库中的随机函数，得到一个>=0,<8的随机数（pirze.length即div个数）
+						button.onclick = null; //定义未点击状态的按钮
+					}
+		 
+					function pu() { //这里k取0-7，执行8次
+						if (k < pirze.length - 1) {  //if循环语句，判断条件k初始值为1<8-1执行下面语句
+							k++; //每次循环k+1
+							pirze[k - 1].style.background = "royalblue"; //pirze数组的k-1个元素，即上一个div方块变为蓝色
+							pirze[k].style.background = "pink"; //下一个div方块变为粉色
+						} else { //如果不满足判断条件，即转满一圈，执行下面语句
+							k = 0; //赋值给k为0，新一圈的开始
+							count++; //圈数加1
+							pirze[pirze.length - 1].style.background = "royalblue";
+							pirze[k].style.background = "pink";
+						}
+						if (count <= 5) { //小于5圈时
+							if (time <= 100) { //时间小于500时
+								time = 100;
+							} else {  //前5圈每圈转完速度加快20
+								time -= 20;
+							}
+						} else {
+							if (time >= 500) { //超过五圈速度每圈减20
+								time = 500;
+							} else {
+								time += 20;
+							}
+		 
+						}
+						if (count > 7) {  //如果大于七圈
+							clearInterval(int);  //清楚定时器
+							count = 0;
+							rom = 0;
+							time = 500;
+							button.onclick = eve;  //回归初始状态
+							let text = pirze[k].innerHTML;//元素标记的结束
+							setTimeout(function(){
+								alert("恭喜您获得：" + text);
+			 				},300)//弹出一个窗口，定时器300
+						}else{
+							clearInterval(int);
+							int = setInterval(pu, time)
+						}
+		 
+					}
+	</script>
+</html>
