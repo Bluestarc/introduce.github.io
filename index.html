@@ -1,88 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
- 
+	<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简历</title>
+  <title>个人简历</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background-color: #f4f4f4;
+    }
+
+    .resume {
+      width: 21cm;
+      max-width: 100%;
+      padding: 2cm;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .info {
+      flex-grow: 1;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+    .info-row {
+      display: flex;
+      margin-bottom: 8px;
+    }
+
+    .info-label {
+      width:60px;
+      max-width: 120px;
+      font-weight: bold;
+    }
+
+    .info-value {
+      flex-grow: 1;
+    }
+  </style>
 </head>
- 
-<body background=https://img-blog.csdnimg.cn/833e1289e34843738eef10a0701dc8f4.jpeg>
- 
-    <table border="1" align="center" cellpadding="10" width="800">
-        <tr>
-            <th colspan="7" bgcolor="BurlyWood">我的个人简介</th>
-        </tr>
- 
-        <tr>
-            <th bgcolor="BurlyWood">姓名:</th>
-            <td> 老丁头</td>
-            <th bgcolor="BurlyWood">年龄:</th>
-            <td>23</td>
-            <th bgcolor="BurlyWood">民族:</th>
-            <td>汉</td>
-            <td rowspan="3" width="100">
-                <p>
-                    <a href="https://jackiehao.blog.csdn.net/">
-                        <img border="0" src="https://img-blog.csdnimg.cn/a293afdc35be4454ba848e9e030d70ca.jpeg" />
-                    </a>
-                </p>
-            </td>
-        </tr>
- 
-        <tr>
-            <th bgcolor="BurlyWood">出生日期:</th>
-            <td>20010000</td>
-            <th bgcolor="BurlyWood">政治面貌:</th>
-            <td>团员</td>
-            <th bgcolor="BurlyWood">学历:</th>
-            <td>本科</td>
-        </tr>
- 
-        <tr>
-            <th bgcolor="BurlyWood">专业:</th>
-            <td>计算机科学与技术</td>
-            <th bgcolor="BurlyWood">毕业学校:</th>
-            <td>枣庄学院</td>
-            <th bgcolor="BurlyWood">邮编:</th>
-            <td>237483</td>
-        </tr>
- 
-        <tr>
-            <th bgcolor="BurlyWood">爱好:</th>
-            <td>玩，拆，装</td>
-            <th bgcolor="BurlyWood">籍贯:</th>
-            <td>皖</td>
-            <th bgcolor="BurlyWood">邮箱:</th>
-            <td colspan="2" <p><a href="mailto:182******@qq.com?subject=Hello%20again">182*******@qq.com </a></p>
-            </td>
-        </tr>
- 
-        <tr>
-            <th height="160" bgcolor="BurlyWood">个人特长:</th>
-            <td colspan="6">
-                <p>我爱计算机，我爱计算机我爱计算机，我爱计算机我爱计算机，我爱计算机</p>
-                <p>我爱计算机，我爱计算机我爱计算机，我爱计算机我爱计算机，我爱计算机</p>
-                <p>我爱计算机，我爱计算机我爱计算机，我爱计算机我爱计算机，我爱计算机</p>
-            </td>
-        </tr>
- 
-        <tr>
-            <th height="160" bgcolor="BurlyWood"> 自我介绍:</th>
-            <td colspan="6">
-                <p>来自山东省临沂市的一个小村庄里，我爱计算机，我爱学习</p>
-                <p>来自山东省临沂市的一个小村庄里，我爱计算机，我爱学习</p>
-                <p>来自山东省临沂市的一个小村庄里，我爱计算机，我爱学习</p>
-        </tr>
- 
-        <tr>
-            <th height="160" bgcolor="BurlyWood">总结:</th>
-            <td colspan="6">
-                <p>来自山东省临沂市的一个小村庄里，我爱计算机，我爱学习</p>
-                <p>来自山东省临沂市的一个小村庄里，我爱计算机，我爱学习</p>
-                <p>来自山东省临沂市的一个小村庄里，我爱计算机，我爱学习</p>
-        </tr>
-    </table>
+<body>
+  <div class="resume">
+    <h2>个人简历</h2>
+    <div class="header">
+      <div class="info">
+        <div class="info-row">
+          <div class="info-label">姓名:</div>
+          <div class="info-value">老丁头</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">性别:</div>
+          <div class="info-value">男</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">年龄:</div>
+          <div class="info-value">23</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">地址:</div>
+          <div class="info-value">123 Main St, City, State</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">电话:</div>
+          <div class="info-value">123-456-7890</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Email:</div>
+          <div class="info-value">john.doe@example.com</div>
+        </div>
+      </div>
+      <img class="avatar" src="avatar.jpg" alt="头像">
+    </div>
+    <div class="section">
+      <h2>教育背景</h2>
+      <div class="info-row">
+        <div class="info-label">学位:</div>
+        <div class="info-value">Bachelor's degree</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">学校:</div>
+        <div class="info-value">ZaoZhuang University</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">日期:</div>
+        <div class="info-value">2020 - 2024</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">专业:</div>
+        <div class="info-value">计算机科学</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">成绩:</div>
+        <div class="info-value">4.0</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">荣誉:</div>
+        <div class="info-value">优秀毕业生</div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>工作经验</h2>
+      <div class="info-row">
+        <div class="info-label">职位:</div>
+        <div class="info-value">Web Developer</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">公司:</div>
+        <div class="info-value">XYZ Company</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">日期:</div>
+        <div class="info-value">2020 - 2023</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">地点:</div>
+        <div class="info-value">City, State</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">描述:</div>
+        <div class="info-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">成就:</div>
+        <div class="info-value">优秀员工奖</div>
+      </div>
+    </div>
+  </div>
 </body>
- 
-</html>https://github.com/Bluestarc/introduce.github.io
+</html>
+
+
